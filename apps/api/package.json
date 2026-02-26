@@ -1,0 +1,49 @@
+{
+  "name": "api",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build --compile --minify --outfile server src/index.ts",
+    "lint": "eslint",
+    "migrate": "bun x drizzle-kit push"
+  },
+  "overrides": {
+    "@sinclair/typebox": "0.32.4"
+  },
+  "dependencies": {
+    "@elysiajs/bearer": "^1.4.3",
+    "@elysiajs/cors": "^1.4.1",
+    "@elysiajs/openapi": "^1.4.14",
+    "@elysiajs/static": "^1.4.7",
+    "@paralleldrive/cuid2": "^3.3.0",
+    "better-auth": "^1.4.18",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.45.1",
+    "drizzle-typebox": "^0.3.3",
+    "elysia": "^1.4.26",
+    "eslint": "^9.39.2",
+    "imgkit": "^2.2.0",
+    "pg": "^8.17.2",
+    "slug": "^11.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@types/pg": "^8.16.0",
+    "@types/slug": "^5.0.9",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.31.8",
+    "tsx": "^4.21.0"
+  },
+  "module": "src/index.js",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  }
+}
