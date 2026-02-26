@@ -51,7 +51,6 @@ export const column = (): ColumnDef<
               fill
               sizes={"100vw"}
               className="object-cover"
-              unoptimized={true}
             />
           ) : (
             <ImageIcon className="size-5" />
