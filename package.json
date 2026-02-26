@@ -1,19 +1,25 @@
 {
-  "name": "sci-master",
+  "name": "elysia-master",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "add:api": "pnpm add --filter api",
+    "add:toko": "pnpm add --filter toko",
+    "add:admin": "pnpm add --filter admin",
     "dev": "turbo run dev",
+    "dev:toko": "turbo run dev --filter toko --filter api",
+    "dev:admin": "turbo run dev --filter admin --filter api",
+    "build": "turbo run build",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "prettier": "^3.7.4",
-    "turbo": "^2.7.6",
+    "eslint-plugin-import": "^2.32.0",
+    "prettier": "^3.8.1",
+    "turbo": "^2.8.11",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@10.30.2",
   "engines": {
     "node": ">=18"
   }
